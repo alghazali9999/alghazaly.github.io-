@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alghazaly</title>
+
+    <!-- Link Style css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- And Link Style css -->
+
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- And Link Font Awesome -->
+
+    <!-- Scroll Animate AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- And Scroll Animate AOS -->
+
+    <!-- Scroll Animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- And Scroll Animate css -->
+
+    <!-- Image Icons -->
+    <link rel="icon" href="image/Frame 123 (4).png" type="image/gif" sizes="16x16">
+    <!-- Image Icons -->
+
+    <!-- Installitions script Tailwind   -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- And Installitions script Tailwind  -->
+
+    <!-- Script Icons -->
+    <script src="https://kit.fontawesome.com/c5a550f03c.js" crossorigin="anonymous"></script>
+    <!-- Script Icons -->
+</head>
+
+<body class="bg-zinc-950 text-white">
+
+    <!-- Navbar section -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-zinc-950 shadow-md">
+        <div class="max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html"><div class="text-xl font-bold text-rose-600">Algha<span class="text-xl font-bold text-white">zaly</span>
+            </div></a>
+            <div class="lg:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <nav id="menu" class="hidden lg:flex space-x-8">
+                <a href="#home" class="text-rose-600 text-xl font-bold hover:text-rose-600">Home</a>
+                <a href="#skills" class="text-white text-xl font-semibold hover:text-rose-600">skills</a>
+                <a href="#project" class="text-white text-xl font-semibold hover:text-rose-600">Project</a>
+                <a href="#contact" class="text-white text-xl font-semibold hover:text-rose-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="overlay" class="fixed inset-0 bg-black opacity-0 pointer-events-none"></div>
+
+    <div id="slide-menu" class="fixed top-0 right-0 w-90 h-full bg-zinc-950 transform translate-x-full shadow-lg z-50">
+        <div class="flex justify-end p-4">
+            <button id="close-menu" class="text-white focus:outline-none">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-4 p-4 text-white text-center">
+            <div class="text-xl font-bold text-rose-600">Algha<span class="text-xl font-bold text-white">zaly</span>
+            </div>
+            <a href="#home" class="hover:text-rose-600">Home</a>
+            <a href="#skills" class="hover:text-rose-600">Skills</a>
+            <a href="#project" class="hover:text-rose-600">Project</a>
+            <a href="#contact" class="hover:text-rose-600">Contact</a>
+            <br>
+            <hr class="border-rose-600 my-4">
+            <div class="space-y-8">
+                <a href="https://www.instagram.com/zhalgii_?igsh=MWgwbzc3dXhrZmUyZw=="
+                    class="transition duration-500 block bg-rose-600 text-white font-semibold text-lg py-4 px-20 rounded-md flex items-center space-x-6 justify-start w-full hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90 border border-transparent hover:border-white">
+                    <img src="https://cdn-icons-png.flaticon.com/512/717/717392.png" alt="Instagram"
+                        class="w-6 h-6 filter invert">
+                    <span>Instagram</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/al-gi-73193a299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    class="transition duration-500 block bg-rose-600 text-white font-semibold text-lg py-4 px-20 rounded-md flex items-center space-x-6 justify-start w-full hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90 border border-transparent hover:border-white">
+                    <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="LinkedIn"
+                        class="w-6 h-6 filter invert">
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://www.tiktok.com/@al.giiiiiiiii?_t=8ovEKhNfoIc&_r=1"
+                    class="transition duration-500 block bg-rose-600 text-white font-semibold text-lg py-4 px-20 rounded-md flex items-center space-x-6 justify-start w-full hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90 border border-transparent hover:border-white">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3116/3116490.png" alt="Tiktok"
+                        class="w-6 h-6 filter invert">
+                    <span>Tiktok</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- And Navbar section -->
+
+    <!-- Hero section -->
+    <section
+        class="relative w-100 h-100 mx-auto max-w-screen-xl px-4 py-20 flex flex-col-reverse md:flex-row items-center justify-center md:justify-between px-6 py-2 animate__animated animate__backInDown"
+        id="home">
+        <div class="md:w-1/2 mt-8 md:mt-0">
+            <h1 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-normal text-left">
+                <span class="text-white text-lg md:text-xl font-medium">Hello!</span><br>
+                <span class="animate-color-change text-rose-600 text-3xl font-bold md:text-lg lg:text-4xl xl:text-4xl">I'm Al
+                    Ghazali</span><br>
+                <span class="typing-animation" id="typing-text">UI/UX Design, Mobile Design, Web Design</span>
+
+            </h1>
+            <p class="mt-6 text-base text-white text-left py-2">
+                I'm from Indonesia and I've been working as a UI designer for more than 1 year. I am studying at
+                Microskills University in the field of Informatika Engineering class of 2023 in North Sumatra.
+            </p>
+
+            <div class="mt-6 flex space-x-7 items-center justify-start">
+                <a href="mailto:algi25357@gmail.com"
+                    class="animate-color-change bg-rose-600 transition duration-500 hover:bg-gray-500 text-white font-semibold py-3 px-8 rounded-md">
+                    Email Me
+                </a>
+
+                <a href="https://www.instagram.com/zhalgii_?igsh=MWgwbzc3dXhrZmUyZw=="
+                    class="flex items-center justify-center">
+                    <i class="fab fa-instagram fa-bounce text-white text-3xl"></i>
+                </a>
+
+                <a href="#" class="flex items-center justify-center">
+                    <i class="fab fa-dribbble fa-bounce text-white text-3xl"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/al-gi-73193a299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    class="flex items-center justify-center">
+                    <i class="fab fa-linkedin fa-bounce text-white text-3xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="image-container relative flex justify-center items-center">
+            <img src="image/Frame 123 (4).png" alt="Alghazaly"
+                class="image-3d w-full h-full md:max-w-md responsive-image" id="Home">
+        </div>
+    </section>
+
+    <style>
+        @keyframes colorChange {
+            0% {
+                color: #ffffff;
+                /* Warna awal */
+            }
+
+            50% {
+                color: #000;
+                /* Warna tengah */
+            }
+
+            100% {
+                color: #ffffff;
+                /* Kembali ke warna awal */
+            }
+        }
+
+        .animate-color-change {
+            animation: colorChange 3s infinite;
+        }
+
+        .color-animation {
+            animation: animateColor 5s infinite;
+        }
+
+        .color-animation {
+            animation: animateColor 5s infinite;
+        }
+
+        @media (max-width: 640px) {
+            .responsive-image {
+                width: 480px;
+                height: 275px;
+                object-fit: cover;
+                /* Menjaga rasio dan mengisi area yang tersedia */
+            }
+
+            #carouselInner img {
+                width: 480px;
+                height: 275px;
+                object-fit: cover;
+            }
+
+        }
+    </style>
+    <!-- And Hero section -->
+
+    <!-- About section -->
+    <section class="relative w-100 h-100 mx-auto max-w-screen-xl px-4 p-16 mt-6 text-left" id="skills"
+        data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+        <div
+            class="mx-auto max-w-screen-xl px-4 flex flex-col items-center justify-center max-w-xl mx-auto text-center ltr:sm:text-left rtl:sm:text-right min-h-[20vh]">
+            <h2 class="text-3xl font-bold tracking-tight text-rose-600 sm:text-4xl">
+                Section <span class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Skills</span>
+            </h2>
+
+            <p class="mt-4 text-white">
+                I am proficient in using Tailwind CSS and custom CSS for responsive styling, and have experience
+                creating elements such as carousels, navbars, and animated text effects. My skills also include
+                styling
+                images and layouts to ensure optimal display across a variety of devices, including desktop, tablet,
+                and
+                mobile.
+            </p>
+        </div>
+        <div class="relative w-100 h-100 mx-auto max-w-screen-xl px-4 flex flex-col md:flex-row items-center py-16">
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="flex p-8 mx-auto">
+                    <img id="image-wrapper" src="image/Frame 123 (5).png" alt="Profile Image"
+                        class="transition duration-500 inset-0 shadow-lg object-cover w-full sm:w-[18rem] md:w-[22rem] lg:w-[28rem] h-auto responsive-img hover-effect">
+                </div>
+
+                <div class="flex flex-col items-start px-25 max-w-xl mt-6 text-left">
+                    <article class="space-y-4 text-white">
+                        <h2 class="mt-6 text-3xl text-rose-600 font-bold sm:text-4xl">
+                            My <span class="text-3xl text-white font-bold sm:text-4xl">Skills.</span>
+                        </h2>
+                        <p class="mt-6 text-base text-white text-left">
+                            This is the result of my own portfolio which will have a big impact on my work and
+                            career,
+                            but
+                            there are several portfolio collections that I have had, especially in the field of
+                            influencers
+                            from outside and inside, I have collected them so that they will become my personal work
+                            for
+                            the
+                            future.
+                        </p>
+
+                        <p class="mt-6 text-base text-white text-left">
+                            This project is just my own imagination, why? If I only gathered a little from my own
+                            experience, it would not be enough for me. Actually I was able to learn a lot about how
+                            I
+                            wanted
+                            to design my personal portfolio, which from the start was impossible to be possible.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 py-8 justify-start">
+                            <a class="transition duration-500 inline-flex items-center gap-2 rounded border border-white px-4 py-2 text-white hover:bg-sky-400 hover:text-white focus:outline-none focus:ring active:bg-sky-400 md:px-6 md:py-2"
+                                href="https://tailwindcss.com/">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+                                    alt="Tailwind Icon" class="w-5 h-5 md:w-4 md:h-4">
+                                <span class="text-xs md:text-xs font-medium">Tailwind CSS</span>
+                                <svg class="w-4 h-4 md:w-4 md:h-4 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+
+                            <a class="transition duration-500 inline-flex items-center gap-2 rounded border border-white px-4 py-2 text-white hover:bg-indigo-800 hover:text-white focus:outline-none focus:ring active:bg-indigo-800 md:px-6 md:py-2"
+                                href="https://apps.microsoft.com/detail/xpfd4t9n395qn6?hl=en-US&gl=US">
+                                <img src="https://i.pinimg.com/564x/1f/f7/60/1ff760220ff970395cd1a591a401ce77.jpg"
+                                    alt="Photo Shop Icon" class="w-5 h-5 md:w-4 md:h-4">
+                                <span class="text-xs md:text-xs font-medium">Photo Shop</span>
+                                <svg class="w-4 h-4 md:w-4 md:h-4 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+
+                            <a class="transition duration-500 inline-flex items-center gap-2 rounded border border-white px-4 py-2 text-white hover:bg-rose-600 hover:text-white focus:outline-none focus:ring active:bg-rose-600 md:px-6 md:py-2"
+                                href="https://www.figma.com/">
+                                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma Icon"
+                                    class="w-5 h-5 md:w-4 md:h-4">
+                                <span class="text-xs md:text-xs font-medium">Figma</span>
+                                <svg class="w-4 h-4 md:w-4 md:h-4 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+
+                            <a class="transition duration-500 inline-flex items-center gap-2 rounded border border-white px-4 py-2 text-white hover:bg-orange-500 hover:text-white focus:outline-none focus:ring active:bg-orange-500 md:px-6 md:py-2"
+                                href="https://www.w3schools.com/html/">
+                                <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000"
+                                    alt="HTML5 Icon" class="w-5 h-5 md:w-4 md:h-4">
+                                <span class="text-xs md:text-xs font-medium">HTML5</span>
+                                <svg class="w-4 h-4 md:w-4 md:h-4 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+
+                            <a class="transition duration-500 inline-flex items-center gap-2 rounded border border-white px-4 py-2 text-white hover:bg-blue-500 hover:text-white focus:outline-none focus:ring active:bg-blue-500 md:px-6 md:py-2"
+                                href="https://www.w3schools.in/css3/tutorials/">
+                                <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000"
+                                    alt="CSS3 Icon" class="w-5 h-5 md:w-4 md:h-4">
+                                <span class="text-xs md:text-xs font-medium">CSS3</span>
+                                <svg class="w-4 h-4 md:w-4 md:h-4 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+
+                            <a class="transition duration-500 inline-flex items-center gap-2 rounded border border-white px-4 py-2 text-white hover:bg-yellow-400 hover:text-white focus:outline-none focus:ring active:bg-yellow-400 md:px-6 md:py-2"
+                                href="https://www.w3schools.com/js/">
+                                <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="JavaScript Icon"
+                                    class="w-5 h-5 md:w-4 md:h-4">
+                                <span class="text-xs md:text-xs font-medium">Javascript</span>
+                                <svg class="w-4 h-4 md:w-4 md:h-4 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                            <a class="transition duration-500 inline-flex items-center gap-2 rounded border border-white px-4 py-2 text-white hover:bg-purple-500 hover:text-white focus:outline-none focus:ring active:bg-purple-500 md:px-6 md:py-2"
+                                href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">
+                                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="Bootstrap Icon"
+                                    class="w-5 h-5 md:w-4 md:h-4">
+                                <span class="text-xs md:text-xs font-medium">Framework Bootstrap 5</span>
+                                <svg class="w-4 h-4 md:w-4 md:h-4 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .image-wrapper {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .responsive-img {
+            transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+
+        }
+
+        .hover-effect:hover {
+            /* Membesarkan gambar sebesar 10% */
+            box-shadow: 0 0 20px #e11d48;
+            filter: brightness(1.2);
+            transform: scale(1.05);
+        }
+
+        /* Untuk layar kecil di bawah 640px */
+        @media (max-width: 639px) {
+            .responsive-img {
+                height: auto;
+                width: 100%;
+            }
+        }
+
+        /* Untuk layar minimal 640px (sm) */
+        @media (min-width: 640px) {
+            .responsive-img {
+                height: 480px;
+                width: 490px;
+            }
+        }
+
+        /* Untuk layar minimal 640px (sm) */
+        @media (min-width: 768px) {
+            .responsive-img {
+                height: 532px;
+                width: 982px;
+            }
+        }
+
+        /* Untuk layar minimal 640px (sm) */
+        @media (min-width: 820px) {
+            .responsive-img {
+                height: 522px;
+                width: 989px;
+            }
+        }
+
+        /* Untuk layar minimal 640px (sm) */
+        @media (min-width: 1024px) {
+            .responsive-img {
+                height: 490px;
+                width: 380px;
+            }
+        }
+
+        /* Untuk layar minimal 640px (sm) */
+        @media (min-width: 1280px) {
+            .responsive-img {
+                height: 490px;
+                width: 540px;
+            }
+        }
+    </style>
+    <!-- And About section -->
+
+    <!-- Project Section  -->
+    <section
+        class="relative w-full h-full mx-auto max-w-screen-xl px-4 delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0">
+        <div id="project" class="bg-zinc-950 py-12" data-aos="zoom-in-up">
+            <div
+                class="mx-auto max-w-screen-xl px-4 flex flex-col items-center justify-center max-w-xl mx-auto text-center ltr:sm:text-left rtl:sm:text-right min-h-[20vh]">
+                <h2 class="text-3xl font-bold tracking-tight text-rose-600 sm:text-4xl">
+                    UI/UX my <span class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        project design</span>
+                </h2>
+
+                <p class="mt-4 text-white">
+                    My UI/UX design projects for web and mobile emphasize innovation and seamless user experience. With
+                    a user-centric approach, every design element is designed to enhance interaction and maximize user
+                    experience.
+                </p>
+            </div>
+            <div class="max-w-screen-lg mx-auto px-4">
+                <br>
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="project-1">
+                        <img src="image/My Portofolio One.png" alt="Project 1"
+                            class="transition duration-500 w-full max-w-full h-auto shadow-lg hover:opacity-75 transition-opacity duration-300">
+                        <div class="mt-8">
+                            <p class="text-xl mb-2 mt-6 text-left">Bike Web Design</p>
+                            <a href="Bike Design.html"></a>
+                        </div>
+                    </div>
+
+                    <div class="project-2">
+                        <img src="image/My Portofolio Tree.png" alt="Project 2"
+                            class="transition duration-500 w-full max-w-full h-auto shadow-lg hover:opacity-75 transition-opacity duration-300">
+                        <div class="mt-8">
+                            <p class="text-xl mb-2 mt-6 text-left">Sneakers Mobile App Design</p>
+                            <a href="Sneakers Design.html"></a>
+                        </div>
+                    </div>
+
+                    <div class="project-3">
+                        <img src="image/My Portofolio Two.png" alt="Project 3"
+                            class="transition duration-500 w-full max-w-full h-auto shadow-lg hover:opacity-75 transition-opacity duration-300">
+                        <div class="mt-8">
+                            <p class="text-xl mb-2 mt-6 text-left">Food Web Design</p>
+                            <a href="Food Design.html">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-4">
+                        <img src="image/My Portofolio four.png" alt="Project 4"
+                            class="transition duration-500 w-full max-w-full h-auto rounded-lg shadow-lg hover:opacity-75 transition-opacity duration-300">
+                        <div class="mt-8">
+                            <p class="text-xl mb-2 mt-6 text-left">Coffee Mobile App Design</p>
+                            <a href="Coffee Design.html">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col items-center gap-4 bg-zinc-700 p-10 shadow-lg sm:flex-row sm:justify-between">
+            <strong class="text-lg text-white sm:text-xl"> Interested working with me? </strong>
+            <div class="flex gap-4" id="contact">
+                <a class="animate-color-change transition duration-500 inline-flex items-center gap-2 border border-rose-600 bg-rose-600 px-6 py-2 text-sm text-white  hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90 sm:px-8 sm:py-3 sm:text-base"
+                    href="mailto:algi25357@gmail.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4338/4338894.png" alt="Gmail"
+                        class="w-4 h-4 sm:w-6 sm:h-6 filter invert">
+                    <span>Email Me</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- And Project Section  -->
+
+    <!-- Footer Section -->
+    <footer class="bg-zinc-950">
+        <div class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+            <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
+                <a class="fa-bounce inline-block rounded-full bg-rose-600 p-2 text-white shadow transition hover:bg-gray-500 sm:p-3 lg:p-4"
+                    href="#">
+                    <span class="sr-only">Back to top</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="lg:flex lg:items-end lg:justify-between">
+                <div>
+                    <div class="flex justify-center text-teal-600 lg:justify-start">
+                        <div class="flex items-center gap-4">
+                            <img src="image/Frame 123 (4).png" alt="Logo" class="w-10 h-10 rounded-full">
+
+                            <div class="text-lg font-bold">
+                                <span class="font-serif text-white">Al Ghazaly</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <p class="mx-auto mt-6 max-w-md text-left leading-relaxed text-white sm:text-left lg:text-left">
+                        "Thank you for visiting this webpage. I hope you are interested in viewing it and I am sure
+                        you,
+                        especially as a designer, can give me some good criticism".
+                    </p>
+                </div>
+            </div>
+
+            <p class="mt-12 text-center text-sm text-white lg:text-right">
+                Created with <span class="text-lg"> <i class="fa-solid fa-heart fa-beat" style="color: red;"></i></span>
+                by Al Ghazali.
+            </p>
+        </div>
+    </footer>
+    <!-- And Footer Section -->
+
+    <!-- section Javascript -->
+    <script src="script.js"></script>
+    <!-- And section Javascript -->
+
+    <!-- Animate scroll script AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- And Animate scroll script AOS -->
+</body>
+
+</html>

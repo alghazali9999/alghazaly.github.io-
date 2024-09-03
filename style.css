@@ -1,0 +1,182 @@
+/* HTML */
+html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+/* And HTML */
+
+/* Navbar */
+#slide-menu {
+    transition: transform 0.3s ease-in-out;
+}
+
+#overlay {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#menu-toggle.open #menu-icon {
+    transform: rotate(90deg);
+}
+
+/* And Navbar */
+
+/* hero Section */
+.typing-animation {
+    font-size: 1.75rem;
+    /* Adjust as needed */
+    color: #e11d48;
+    border-right: 2px solid #e11d48;
+    /* Cursor effect */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #e11d48;
+    }
+}
+
+/* Typing Animation Styles */
+.typing-animation {
+    font-size: 1.75rem;
+    /* Default size for mobile screens */
+    color: #e11d48;
+    border-right: 2px solid #e11d48;
+    /* Cursor effect */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #fff;
+    }
+}
+
+/* Media queries to adjust text sizes */
+@media (min-width: 640px) {
+
+    /* md */
+    .text-lg {
+        font-size: 1.25rem;
+        /* Larger size for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* lg */
+    .text-xl {
+        font-size: 1.5rem;
+        /* Larger size for large screens */
+    }
+
+    #carouselInner img {
+        height: auto;
+        /* Membiarkan gambar menyesuaikan tingginya secara otomatis */
+        max-height: 640px;
+        /* Mengatur batas maksimal tinggi gambar */
+        object-fit: cover;
+        /* Menjaga gambar tetap proporsional dan terpotong jika terlalu besar */
+    }
+}
+
+@media (min-width: 1280px) {
+
+    /* xl */
+    .text-2xl {
+        font-size: 1.875rem;
+        /* Larger size for extra-large screens */
+    }
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-3d {
+    transition: box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.image-container:hover .image-3d {
+    box-shadow: 0 0 20px #e11d48;
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.image-container {
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-3d {
+    transition: transform 0.1s;
+    transform-style: preserve-3d;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 0;
+}
+
+.image-container:hover::before {
+    opacity: 1;
+}
+
+.image-3d {
+    position: relative;
+    z-index: 10;
+    /* Agar gambar tetap berada di depan efek hover */
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .image-3d {
+    transform: scale(1.50);
+}
+
+/* And hero Section */

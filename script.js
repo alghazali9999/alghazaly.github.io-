@@ -81,12 +81,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
     closeMenu.addEventListener("click", closeSlideMenu);
     overlay.addEventListener("click", closeSlideMenu);
-    
-    document.addEventListener("click", function(event) {
+
+    document.addEventListener("click", function (event) {
         if (!slideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
             closeSlideMenu();
         }
     });
 });
 
-// Hamburger menu //
+// And Hamburger menu //
+
+// Stats Section //
+document.addEventListener('DOMContentLoaded', function () {
+    function animateNumber(elementId, endValue, duration) {
+        const element = document.getElementById(elementId);
+        const startValue = 0;
+        const startTime = performance.now();
+        
+        function updateNumber(timestamp) {
+            const elapsedTime = timestamp - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const currentValue = Math.floor(progress * endValue);
+            
+            // Format the number with commas
+            const formattedValue = currentValue.toLocaleString();
+            element.textContent = `$${formattedValue}`;
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateNumber);
+            } else {
+                element.textContent = `$${endValue.toLocaleString()}`;
+            }
+        }
+        
+        requestAnimationFrame(updateNumber);
+    }
+
+    // Start animations
+    animateNumber('total-code', 580, 2000); 
+    animateNumber('Project', 150, 2000);   
+    animateNumber('views', 790, 2000);      
+    animateNumber('likes', 3500, 2000);      
+});
+// And Stats Section //

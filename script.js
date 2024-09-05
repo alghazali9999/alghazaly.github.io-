@@ -1,5 +1,3 @@
-
-
 // Hero Section //
 const textElement = document.getElementById('typing-text');
 const texts = ['UI/UX Design', 'Mobile Design', 'Web Design'];
@@ -90,3 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // And Hamburger menu //
+
+// Parralax effect //
+window.addEventListener('scroll', function () {
+    const image = document.getElementById('image-wrapper');
+    let scrollPosition = window.pageYOffset;
+
+    // Efek parallax kanan ke kiri, gunakan faktor negatif untuk gerakan ke kiri
+    image.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+});
+// And Parralax effect //

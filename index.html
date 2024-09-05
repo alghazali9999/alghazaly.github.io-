@@ -239,8 +239,9 @@
         <div class="relative w-100 h-100 mx-auto max-w-screen-xl px-4 flex flex-col md:flex-row items-center py-16"
             data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <div class="flex flex-col md:flex-row items-center">
-                <div class="flex p-8 mx-auto overflow-hidden">
-                    <img id="image-wrapper" src="image/Frame 123 (5).png" alt="Profile Image"
+                <div class="flex p-8 mx-auto overflow-hidden bg-parallax relative" id="parallax-background">
+                    <img id="image-wrapper"
+                        src="image/WhatsApp_Image_2024-08-21_at_15.30.42_e1333d26-removebg-preview 2.png" 
                         class="thumbnail transition duration-500 inset-0 shadow-lg object-cover w-full sm:w-[18rem] md:w-[22rem] lg:w-[28rem] h-auto responsive-img hover-effect parallax-img">
                 </div>
 
@@ -360,16 +361,22 @@
             display: inline-block;
         }
 
-        .parallax-img {
-            transition: transform -0.1s ease-in-out;
-            position: relative;
-        }
-
-        .overflow-hidden {
+        /* Gaya latar belakang untuk parallax */
+        .bg-parallax {
+            background-image: url('image/Frame\ 124.png');
+            /* Ganti dengan URL gambar latar belakang Anda */
+            background-size: cover;
+            /* Latar belakang menutupi seluruh elemen */
+            background-position: center;
+            /* Awal posisi di tengah */
+            background-attachment: fixed;
+            /* Membuat efek parallax */
             overflow: hidden;
-            position: relative;
         }
 
+        .parallax-img {
+            transition: transform 0.1s ease-out;
+        }
 
         .responsive-img {
             transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
@@ -379,11 +386,10 @@
         .hover-effect:hover {
             /* Membesarkan gambar sebesar 10% */
             filter: brightness(1.2);
-            transform: scale(1.05);
         }
 
         /* Untuk layar kecil di bawah 640px */
-        @media (max-width: 639px) {
+        @media (max-width: 640px) {
             .responsive-img {
                 height: auto;
                 width: 100%;
@@ -394,11 +400,11 @@
         @media (min-width: 640px) {
             .responsive-img {
                 height: 375px;
-                width: 480px;
+                width: 540px;
             }
         }
 
-        /* Untuk layar minimal 640px (sm) */
+        /* Untuk layar minimal 768px (sm) */
         @media (min-width: 768px) {
             .responsive-img {
                 height: 532px;
@@ -406,27 +412,45 @@
             }
         }
 
-        /* Untuk layar minimal 640px (sm) */
+        /* Untuk layar minimal 8200px (sm) */
         @media (min-width: 820px) {
             .responsive-img {
-                height: 522px;
-                width: 989px;
+                height: 534px;
+                width: 672px;
             }
         }
 
-        /* Untuk layar minimal 640px (sm) */
+        /* Untuk layar minimal 10240px (sm) */
         @media (min-width: 1024px) {
             .responsive-img {
-                height: 490px;
+                height: 390px;
+                width: 340px;
+            }
+        }
+
+
+        /* Untuk layar minimal 912px (sm) */
+        @media (min-width: 912px) {
+            .responsive-img {
+                height: 590px;
                 width: 380px;
             }
         }
 
-        /* Untuk layar minimal 640px (sm) */
+        /* Untuk layar minimal 712px (sm) */
+        @media (min-width: 712px) {
+            .responsive-img {
+                height: 470px;
+                width: 340px;
+            }
+        }
+
+
+        /* Untuk layar minimal 1280px (sm) */
         @media (min-width: 1280px) {
             .responsive-img {
-                height: 490px;
-                width: 540px;
+                height: 540px;
+                width: 520px;
             }
         }
     </style>

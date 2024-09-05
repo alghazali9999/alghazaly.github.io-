@@ -90,11 +90,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // And Hamburger menu //
 
 // Parralax effect //
+window.addEventListener('scroll', function() {
+    const parallaxBackground = document.getElementById('parallax-background');
+    let scrollPosition = window.pageYOffset;
+
+    // Gerakan latar belakang parallax (semakin besar faktor, semakin kuat efeknya)
+    parallaxBackground.style.backgroundPositionX = `${scrollPosition * 0.5}px`;
+});
+
 window.addEventListener('scroll', function () {
     const image = document.getElementById('image-wrapper');
     let scrollPosition = window.pageYOffset;
-
-    // Efek parallax kanan ke kiri, gunakan faktor negatif untuk gerakan ke kiri
+    
+    // Atur efek parallax kiri-kanan, angka 0.3 bisa disesuaikan untuk memperhalus efek
     image.style.transform = `translateY(${scrollPosition * 0.1}px)`;
 });
+
 // And Parralax effect //

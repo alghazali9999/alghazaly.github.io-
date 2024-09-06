@@ -50,7 +50,8 @@
 <body class="bg-zinc-950 text-white">
 
     <!-- Navbar section -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-zinc-950 shadow-md">
+    <header id="header"
+        class="fixed top-0 left-0 w-full z-50 bg-transparent transition-colors duration-500 ease-in-out shadow-md">
         <div class="max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html">
                 <div class="flex items-center gap-4">
@@ -77,7 +78,8 @@
 
     <div id="overlay" class="fixed inset-0 bg-black opacity-0 pointer-events-none"></div>
 
-    <div id="slide-menu" class="fixed top-0 right-0 w-90 h-full bg-zinc-950 transform translate-x-full shadow-lg z-50">
+    <div id="slide-menu"
+        class="fixed top-0 right-0 w-90 h-full bg-zinc-950-transparent transform translate-x-full shadow-lg z-50">
         <div class="flex justify-end p-4">
             <button id="close-menu" class="text-white focus:outline-none">
                 <i class="fas fa-times text-2xl"></i>
@@ -86,13 +88,13 @@
         <nav class="flex flex-col space-y-4 p-4 text-white text-center">
             <div class="flex items-center justify-center gap-4">
                 <div class="text-lg font-bold">
-                    <span class="font-awesome text-rose-600">Menu:</span>
+                    <span class="font-awesome text-white">MENU:</span>
                 </div>
             </div>
-            <a href="#home" class="hover:text-rose-600">Home</a>
-            <a href="#skills" class="hover:text-rose-600">Skills</a>
-            <a href="#project" class="hover:text-rose-600">Project</a>
-            <a href="#contact" class="hover:text-rose-600">Contact</a>
+            <a href="#home" class="font-bold text-rose-600">HOME</a>
+            <a href="#skills" class="font-bold text-rose-600">SKILLS</a>
+            <a href="#project" class="font-bold text-rose-600">PROJECT</a>
+            <a href="#contact" class="font-bold text-rose-600">CONTACT</a>
             <br>
             <hr class="border-rose-600 my-4">
             <div class="space-y-8">
@@ -115,6 +117,12 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/3116/3116490.png" alt="Tiktok"
                         class="w-6 h-6 filter invert">
                     <span>Tiktok</span>
+                </a>
+                <a href="https://dribbble.com/"
+                    class="transition duration-500 block bg-rose-600 text-white font-semibold text-lg py-4 px-20 rounded-md flex items-center space-x-6 justify-start w-full hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90 border border-transparent hover:border-white">
+                    <img src="https://cdn-icons-png.flaticon.com/512/10290/10290593.png" alt="dribbble"
+                        class="w-6 h-6 filter invert">
+                    <span>Dribbble</span>
                 </a>
             </div>
         </nav>
@@ -153,8 +161,8 @@
                     <i class="fab fa-instagram fa-bounce text-white text-4xl"></i>
                 </a>
 
-                <a href="#" class="flex items-center justify-center">
-                    <i class="fab fa-dribbble fa-bounce text-white text-4xl"></i>
+                <a href="https://dribbble.com/" class="flex items-center justify-center">
+                    <i class="fas fa-basketball-ball fa-bounce text-white text-4xl"></i>
                 </a>
 
                 <a href="https://www.linkedin.com/in/al-gi-73193a299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
@@ -241,12 +249,11 @@
             <div class="flex flex-col md:flex-row items-center">
                 <div class="flex p-8 mx-auto overflow-hidden bg-parallax relative" id="parallax-background">
                     <img id="image-wrapper"
-                        src="image/WhatsApp_Image_2024-08-21_at_15.30.42_e1333d26-removebg-preview 2.png" 
+                        src="image/WhatsApp_Image_2024-08-21_at_15.30.42_e1333d26-removebg-preview 2.png"
                         class="thumbnail transition duration-500 inset-0 shadow-lg object-cover w-full sm:w-[18rem] md:w-[22rem] lg:w-[28rem] h-auto responsive-img hover-effect parallax-img">
                 </div>
-
                 <div class="flex flex-col items-start px-25 max-w-xl mt-6 text-left">
-                    <article class="space-y-4 text-white">
+                    <article class="space-y-7 text-white">
                         <h2 class="mt-6 text-3xl text-rose-600 font-bold sm:text-4xl">
                             My <span class="text-3xl text-white font-bold sm:text-4xl">Skills.</span>
                         </h2>
@@ -265,7 +272,7 @@
                             possible.
                         </p>
 
-                        <div class="flex flex-wrap gap-4 py-8 justify-start">
+                        <div class="flex flex-wrap gap-4 py-4 justify-start">
                             <a class="transition duration-500 inline-flex items-center gap-2 rounded border border-white px-4 py-2 text-white hover:bg-sky-400 hover:text-white focus:outline-none focus:ring active:bg-sky-400 md:px-6 md:py-2"
                                 href="https://tailwindcss.com/">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
@@ -445,12 +452,11 @@
             }
         }
 
-
         /* Untuk layar minimal 1280px (sm) */
         @media (min-width: 1280px) {
             .responsive-img {
                 height: 540px;
-                width: 520px;
+                width: 495px;
             }
         }
     </style>
@@ -533,7 +539,7 @@
     <footer class="bg-zinc-950">
         <div class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
             <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
-                <a class="fa-bounce inline-block rounded-full bg-rose-600 p-2 text-white shadow transition hover:bg-gray-500 sm:p-3 lg:p-4"
+                <a class="fa-bounce inline-block rounded-md bg-rose-600 p-2 text-white shadow transition sm:p-3 lg:p-4"
                     href="#">
                     <span class="sr-only">Back to top</span>
 

@@ -11,9 +11,26 @@ html {
 
 /* And HTML */
 
+/* Header */ 
+/* Warna awal header (transparan) */
+.bg-transparent {
+    background-color: rgba(255, 255, 255, 0); /* Sepenuhnya transparan */
+}
+
+/* Warna hitam transparan yang muncul saat scroll */
+.bg-zinc-950-transparent {
+    background-color: rgba(24, 24, 27, 0.8); /* Warna hitam dengan transparansi 80% */
+    transition: background-color 0.5s ease-in-out; /* Transisi perubahan warna */
+}
+/* And Header */ 
+
 /* Navbar */
 #slide-menu {
     transition: transform 0.3s ease-in-out;
+}
+
+.bg-zinc-950-transparent {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 #overlay {
@@ -143,7 +160,6 @@ html {
 .image-container:hover .image-3d {
     box-shadow: 0 0 20px #e11d48;
     filter: brightness(1.2);
-    transform: scale(1.05);
 }
 
 .image-container {

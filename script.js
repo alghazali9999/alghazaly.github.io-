@@ -107,3 +107,16 @@ window.addEventListener('scroll', function () {
 });
 
 // And Parralax effect //
+
+// Header //
+window.addEventListener("scroll", function() {
+    var header = document.getElementById("header");
+    if (window.scrollY > 50) {
+        header.classList.add("bg-zinc-950-transparent");
+        header.classList.remove("bg-transparent");
+    } else {
+        header.classList.add("bg-transparent");
+        header.classList.remove("bg-zinc-950-transparent");
+    }
+});
+// And Header //
